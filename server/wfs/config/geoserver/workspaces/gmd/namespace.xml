@@ -1,0 +1,5 @@
+<namespace>
+  <id>gmd_namespace</id>
+  <prefix>gmd</prefix>
+  <uri>http://www.isotc211.org/2005/gmd</uri>
+</namespace>

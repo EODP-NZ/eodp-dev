@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--==============================================================================-->
+<!--EODP DISCOVERY WFS EXAMPLE RESPONSE : sams:SF_SpatialSamplingFeature-->
+<!--==============================================================================-->
+<!--These are test data created solely for the purpose by Landcare Research NZ Ltd-->
+<!--The data are not real or correct and must not be used for any analysis or
+    decision making.-->
+<!--==============================================================================-->
+<!--Created by Geoserver 2.5.2 (with app-schema plugin) -->
+<!--==============================================================================-->
+<wfs:FeatureCollection xmlns:wfs="http://www.opengis.net/wfs/2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:om="http://www.opengis.net/om/2.0"
+                       xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:swe="http://www.opengis.net/swe/2.0" xmlns:sam="http://www.opengis.net/sampling/2.0"
+                       xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" numberMatched="unknown" numberReturned="3" timeStamp="2014-09-18T21:37:59.138Z"
+                       xsi:schemaLocation="http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd http://www.opengis.net/wfs/2.0 http://schemas.opengis.net/wfs/2.0/wfs.xsd
+                                           http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd
+                                           http://www.opengis.net/om/2.0 http://schemas.opengis.net/om/2.0/observation.xsd">
+    <wfs:member>
+        <sams:SF_SpatialSamplingFeature gml:id="eodp.sams.sf_spatialsamplingfeature.2000000000001">
+            <gml:description>Sensor Platform located on the Hororata study area wet paddock.</gml:description>
+            <gml:identifier codeSpace="http://www.landcareresearch.co.nz">http://test.data.scinfo.org.nz/x/id/eodp/sams/sf_spatialsamplingfeature/2000000000001</gml:identifier>
+            <gml:name codeSpace="http://www.landcareresearch.co.nz">Hororata Sensor Platform (wet paddock)</gml:name>
+            <gml:name codeSpace="http://someotherparty.example.org.nz">MS.SI.2000000000001</gml:name>
+            <sam:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"/>
+            <sam:sampledFeature xsi:nil="true" nilReason="missing"/>
+            <sam:relatedObservation>
+                <om:OM_Observation gml:id="eodp.om.om_observation.1">
+                    <gml:identifier codeSpace="http://www.landcareresearch.co.nz">http://test.data.scinfo.org.nz/x/id/eodp/om/om_observation/1</gml:identifier>
+                    <om:type xlink:href="http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"/>
+                    <om:phenomenonTime>
+                        <gml:TimePeriod gml:id="gml.timeperiod.1">
+                            <gml:beginPosition>2012-06-11T12:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2012-06-16T12:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </om:phenomenonTime>
+                    <om:resultTime>
+                        <gml:TimeInstant gml:id="gml.timeinstant.1">
+                            <gml:timePosition>2014-09-18T21:37:59.228Z</gml:timePosition>
+                        </gml:TimeInstant>
+                    </om:resultTime>
+                    <om:validTime xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:procedure xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/om/om_process/3000000000001"/>
+                    <om:observedProperty xlink:href="http://test.data.scinfo.org.nz/x/def/propertytype/eodp/soilmoisture-1"/>
+                    <om:featureOfInterest xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/sams/sf_spatialsamplingfeature/2000000000001"/>
+                    <om:resultQuality xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:result xlink:href="http://www.opengis.net/def/nil/OGC/0/withheld"/>
+                </om:OM_Observation>
+            </sam:relatedObservation>
+            <sam:relatedObservation>
+                <om:OM_Observation gml:id="eodp.om.om_observation.2">
+                    <gml:identifier codeSpace="http://www.landcareresearch.co.nz">http://test.data.scinfo.org.nz/x/id/eodp/om/om_observation/2</gml:identifier>
+                    <om:type xlink:href="http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"/>
+                    <om:phenomenonTime>
+                        <gml:TimePeriod gml:id="gml.timeperiod.2">
+                            <gml:beginPosition>2012-06-12T12:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2012-06-13T12:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </om:phenomenonTime>
+                    <om:resultTime>
+                        <gml:TimeInstant gml:id="gml.timeinstant.2">
+                            <gml:timePosition>2014-09-18T21:37:59.228Z</gml:timePosition>
+                        </gml:TimeInstant>
+                    </om:resultTime>
+                    <om:validTime xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:procedure xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/om/om_process/3000000000001"/>
+                    <om:observedProperty xlink:href="http://test.data.scinfo.org.nz/x/def/propertytype/eodp/soilmoisture-2"/>
+                    <om:featureOfInterest xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/sams/sf_spatialsamplingfeature/2000000000001"/>
+                    <om:resultQuality xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:result xlink:href="http://www.opengis.net/def/nil/OGC/0/withheld"/>
+                </om:OM_Observation>
+            </sam:relatedObservation>
+            <sam:relatedObservation>
+                <om:OM_Observation gml:id="eodp.om.om_observation.3">
+                    <gml:identifier codeSpace="http://www.landcareresearch.co.nz">http://test.data.scinfo.org.nz/x/id/eodp/om/om_observation/3</gml:identifier>
+                    <om:type xlink:href="http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"/>
+                    <om:phenomenonTime>
+                        <gml:TimePeriod gml:id="gml.timeperiod.3">
+                            <gml:beginPosition>2012-06-12T12:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2012-06-13T12:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </om:phenomenonTime>
+                    <om:resultTime>
+                        <gml:TimeInstant gml:id="gml.timeinstant.3">
+                            <gml:timePosition>2014-09-18T21:37:59.228Z</gml:timePosition>
+                        </gml:TimeInstant>
+                    </om:resultTime>
+                    <om:validTime xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:procedure xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/om/om_process/3000000000001"/>
+                    <om:observedProperty xlink:href="http://test.data.scinfo.org.nz/x/def/propertytype/eodp/soilmoisture-3"/>
+                    <om:featureOfInterest xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/sams/sf_spatialsamplingfeature/2000000000001"/>
+                    <om:resultQuality xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:result xlink:href="http://www.opengis.net/def/nil/OGC/0/withheld"/>
+                </om:OM_Observation>
+            </sam:relatedObservation>
+            <sam:relatedObservation>
+                <om:OM_Observation gml:id="eodp.om.om_observation.4">
+                    <gml:identifier codeSpace="http://www.landcareresearch.co.nz">http://test.data.scinfo.org.nz/x/id/eodp/om/om_observation/4</gml:identifier>
+                    <om:type xlink:href="http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"/>
+                    <om:phenomenonTime>
+                        <gml:TimePeriod gml:id="gml.timeperiod.4">
+                            <gml:beginPosition>2012-06-12T12:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2012-06-13T12:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </om:phenomenonTime>
+                    <om:resultTime>
+                        <gml:TimeInstant gml:id="gml.timeinstant.4">
+                            <gml:timePosition>2014-09-18T21:37:59.228Z</gml:timePosition>
+                        </gml:TimeInstant>
+                    </om:resultTime>
+                    <om:validTime xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:procedure xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/om/om_process/3000000000001"/>
+                    <om:observedProperty xlink:href="http://test.data.scinfo.org.nz/x/def/propertytype/eodp/soilmoisture-4"/>
+                    <om:featureOfInterest xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/sams/sf_spatialsamplingfeature/2000000000001"/>
+                    <om:resultQuality xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:result xlink:href="http://www.opengis.net/def/nil/OGC/0/withheld"/>
+                </om:OM_Observation>
+            </sam:relatedObservation>
+            <sam:relatedObservation>
+                <om:OM_Observation gml:id="eodp.om.om_observation.5">
+                    <gml:identifier codeSpace="http://www.landcareresearch.co.nz">http://test.data.scinfo.org.nz/x/id/eodp/om/om_observation/5</gml:identifier>
+                    <om:type xlink:href="http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"/>
+                    <om:phenomenonTime>
+                        <gml:TimePeriod gml:id="gml.timeperiod.5">
+                            <gml:beginPosition>2012-06-10T12:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2012-06-16T12:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </om:phenomenonTime>
+                    <om:resultTime>
+                        <gml:TimeInstant gml:id="gml.timeinstant.5">
+                            <gml:timePosition>2014-09-18T21:37:59.228Z</gml:timePosition>
+                        </gml:TimeInstant>
+                    </om:resultTime>
+                    <om:validTime xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:procedure xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/om/om_process/3000000000001"/>
+                    <om:observedProperty xlink:href="http://test.data.scinfo.org.nz/x/def/propertytype/eodp/soiltemperature-1"/>
+                    <om:featureOfInterest xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/sams/sf_spatialsamplingfeature/2000000000001"/>
+                    <om:resultQuality xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:result xlink:href="http://www.opengis.net/def/nil/OGC/0/withheld"/>
+                </om:OM_Observation>
+            </sam:relatedObservation>
+            <sam:relatedObservation>
+                <om:OM_Observation gml:id="eodp.om.om_observation.6">
+                    <gml:identifier codeSpace="http://www.landcareresearch.co.nz">http://test.data.scinfo.org.nz/x/id/eodp/om/om_observation/6</gml:identifier>
+                    <om:type xlink:href="http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"/>
+                    <om:phenomenonTime>
+                        <gml:TimePeriod gml:id="gml.timeperiod.6">
+                            <gml:beginPosition>2012-06-12T12:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2012-06-13T12:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </om:phenomenonTime>
+                    <om:resultTime>
+                        <gml:TimeInstant gml:id="gml.timeinstant.6">
+                            <gml:timePosition>2014-09-18T21:37:59.228Z</gml:timePosition>
+                        </gml:TimeInstant>
+                    </om:resultTime>
+                    <om:validTime xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:procedure xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/om/om_process/3000000000001"/>
+                    <om:observedProperty xlink:href="http://test.data.scinfo.org.nz/x/def/propertytype/eodp/soiltemperature-2"/>
+                    <om:featureOfInterest xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/sams/sf_spatialsamplingfeature/2000000000001"/>
+                    <om:resultQuality xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:result xlink:href="http://www.opengis.net/def/nil/OGC/0/withheld"/>
+                </om:OM_Observation>
+            </sam:relatedObservation>
+            <sam:relatedObservation>
+                <om:OM_Observation gml:id="eodp.om.om_observation.7">
+                    <gml:identifier codeSpace="http://www.landcareresearch.co.nz">http://test.data.scinfo.org.nz/x/id/eodp/om/om_observation/7</gml:identifier>
+                    <om:type xlink:href="http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"/>
+                    <om:phenomenonTime>
+                        <gml:TimePeriod gml:id="gml.timeperiod.7">
+                            <gml:beginPosition>2012-06-12T12:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2012-06-13T12:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </om:phenomenonTime>
+                    <om:resultTime>
+                        <gml:TimeInstant gml:id="gml.timeinstant.7">
+                            <gml:timePosition>2014-09-18T21:37:59.228Z</gml:timePosition>
+                        </gml:TimeInstant>
+                    </om:resultTime>
+                    <om:validTime xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:procedure xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/om/om_process/3000000000001"/>
+                    <om:observedProperty xlink:href="http://test.data.scinfo.org.nz/x/def/propertytype/eodp/soiltemperature-2cm"/>
+                    <om:featureOfInterest xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/sams/sf_spatialsamplingfeature/2000000000001"/>
+                    <om:resultQuality xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:result xlink:href="http://www.opengis.net/def/nil/OGC/0/withheld"/>
+                </om:OM_Observation>
+            </sam:relatedObservation>
+            <sam:relatedObservation>
+                <om:OM_Observation gml:id="eodp.om.om_observation.8">
+                    <gml:identifier codeSpace="http://www.landcareresearch.co.nz">http://test.data.scinfo.org.nz/x/id/eodp/om/om_observation/8</gml:identifier>
+                    <om:type xlink:href="http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"/>
+                    <om:phenomenonTime>
+                        <gml:TimePeriod gml:id="gml.timeperiod.8">
+                            <gml:beginPosition>2012-06-12T12:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2012-06-13T12:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </om:phenomenonTime>
+                    <om:resultTime>
+                        <gml:TimeInstant gml:id="gml.timeinstant.8">
+                            <gml:timePosition>2014-09-18T21:37:59.228Z</gml:timePosition>
+                        </gml:TimeInstant>
+                    </om:resultTime>
+                    <om:validTime xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:procedure xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/om/om_process/3000000000001"/>
+                    <om:observedProperty xlink:href="http://test.data.scinfo.org.nz/x/def/propertytype/eodp/soiltemperature-3"/>
+                    <om:featureOfInterest xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/sams/sf_spatialsamplingfeature/2000000000001"/>
+                    <om:resultQuality xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:result xlink:href="http://www.opengis.net/def/nil/OGC/0/withheld"/>
+                </om:OM_Observation>
+            </sam:relatedObservation>
+            <sam:relatedObservation>
+                <om:OM_Observation gml:id="eodp.om.om_observation.9">
+                    <gml:identifier codeSpace="http://www.landcareresearch.co.nz">http://test.data.scinfo.org.nz/x/id/eodp/om/om_observation/9</gml:identifier>
+                    <om:type xlink:href="http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"/>
+                    <om:phenomenonTime>
+                        <gml:TimePeriod gml:id="gml.timeperiod.9">
+                            <gml:beginPosition>2012-06-12T12:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2012-06-13T12:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </om:phenomenonTime>
+                    <om:resultTime>
+                        <gml:TimeInstant gml:id="gml.timeinstant.9">
+                            <gml:timePosition>2014-09-18T21:37:59.228Z</gml:timePosition>
+                        </gml:TimeInstant>
+                    </om:resultTime>
+                    <om:validTime xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:procedure xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/om/om_process/3000000000001"/>
+                    <om:observedProperty xlink:href="http://test.data.scinfo.org.nz/x/def/propertytype/eodp/soiltemperature-4"/>
+                    <om:featureOfInterest xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/sams/sf_spatialsamplingfeature/2000000000001"/>
+                    <om:resultQuality xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:result xlink:href="http://www.opengis.net/def/nil/OGC/0/withheld"/>
+                </om:OM_Observation>
+            </sam:relatedObservation>
+            <sams:shape>
+                <gml:Point gml:id="sams.shape.2000000000001" srsDimension="2" srsName="http://www.opengis.net/gml/srs/epsg.xml#4326">
+                    <gml:pos>171.929995 -43.593582</gml:pos>
+                </gml:Point>
+            </sams:shape>
+        </sams:SF_SpatialSamplingFeature>
+    </wfs:member>
+    <wfs:member>
+        <sams:SF_SpatialSamplingFeature gml:id="eodp.sams.sf_spatialsamplingfeature.2000000000002">
+            <gml:description>Sensor Platform located on the Hororata study area dry paddock.</gml:description>
+            <gml:identifier codeSpace="http://www.landcareresearch.co.nz">http://test.data.scinfo.org.nz/x/id/eodp/sams/sf_spatialsamplingfeature/2000000000002</gml:identifier>
+            <gml:name codeSpace="http://www.landcareresearch.co.nz">Hororata Sensor Platform (dry paddock)</gml:name>
+            <gml:name codeSpace="http://someotherparty.example.org.nz">MS.SI.2000000000002</gml:name>
+            <sam:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"/>
+            <sam:sampledFeature xsi:nil="true" nilReason="missing"/>
+            <sam:relatedObservation>
+                <om:OM_Observation gml:id="eodp.om.om_observation.10">
+                    <gml:identifier codeSpace="http://www.landcareresearch.co.nz">http://test.data.scinfo.org.nz/x/id/eodp/om/om_observation/10</gml:identifier>
+                    <om:type xlink:href="http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"/>
+                    <om:phenomenonTime>
+                        <gml:TimePeriod gml:id="gml.timeperiod.10">
+                            <gml:beginPosition>2012-06-10T12:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2012-06-14T12:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </om:phenomenonTime>
+                    <om:resultTime>
+                        <gml:TimeInstant gml:id="gml.timeinstant.10">
+                            <gml:timePosition>2014-09-18T21:37:59.228Z</gml:timePosition>
+                        </gml:TimeInstant>
+                    </om:resultTime>
+                    <om:validTime xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:procedure xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/om/om_process/3000000000002"/>
+                    <om:observedProperty xlink:href="http://test.data.scinfo.org.nz/x/def/propertytype/eodp/soilmoisture-1"/>
+                    <om:featureOfInterest xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/sams/sf_spatialsamplingfeature/2000000000002"/>
+                    <om:resultQuality xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:result xlink:href="http://www.opengis.net/def/nil/OGC/0/withheld"/>
+                </om:OM_Observation>
+            </sam:relatedObservation>
+            <sam:relatedObservation>
+                <om:OM_Observation gml:id="eodp.om.om_observation.11">
+                    <gml:identifier codeSpace="http://www.landcareresearch.co.nz">http://test.data.scinfo.org.nz/x/id/eodp/om/om_observation/11</gml:identifier>
+                    <om:type xlink:href="http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"/>
+                    <om:phenomenonTime>
+                        <gml:TimePeriod gml:id="gml.timeperiod.11">
+                            <gml:beginPosition>2012-06-12T12:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2012-06-13T12:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </om:phenomenonTime>
+                    <om:resultTime>
+                        <gml:TimeInstant gml:id="gml.timeinstant.11">
+                            <gml:timePosition>2014-09-18T21:37:59.228Z</gml:timePosition>
+                        </gml:TimeInstant>
+                    </om:resultTime>
+                    <om:validTime xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:procedure xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/om/om_process/3000000000002"/>
+                    <om:observedProperty xlink:href="http://test.data.scinfo.org.nz/x/def/propertytype/eodp/soilmoisture-2"/>
+                    <om:featureOfInterest xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/sams/sf_spatialsamplingfeature/2000000000002"/>
+                    <om:resultQuality xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:result xlink:href="http://www.opengis.net/def/nil/OGC/0/withheld"/>
+                </om:OM_Observation>
+            </sam:relatedObservation>
+            <sam:relatedObservation>
+                <om:OM_Observation gml:id="eodp.om.om_observation.12">
+                    <gml:identifier codeSpace="http://www.landcareresearch.co.nz">http://test.data.scinfo.org.nz/x/id/eodp/om/om_observation/12</gml:identifier>
+                    <om:type xlink:href="http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"/>
+                    <om:phenomenonTime>
+                        <gml:TimePeriod gml:id="gml.timeperiod.12">
+                            <gml:beginPosition>2012-06-12T12:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2012-06-13T12:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </om:phenomenonTime>
+                    <om:resultTime>
+                        <gml:TimeInstant gml:id="gml.timeinstant.12">
+                            <gml:timePosition>2014-09-18T21:37:59.228Z</gml:timePosition>
+                        </gml:TimeInstant>
+                    </om:resultTime>
+                    <om:validTime xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:procedure xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/om/om_process/3000000000002"/>
+                    <om:observedProperty xlink:href="http://test.data.scinfo.org.nz/x/def/propertytype/eodp/soilmoisture-3"/>
+                    <om:featureOfInterest xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/sams/sf_spatialsamplingfeature/2000000000002"/>
+                    <om:resultQuality xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:result xlink:href="http://www.opengis.net/def/nil/OGC/0/withheld"/>
+                </om:OM_Observation>
+            </sam:relatedObservation>
+            <sam:relatedObservation>
+                <om:OM_Observation gml:id="eodp.om.om_observation.13">
+                    <gml:identifier codeSpace="http://www.landcareresearch.co.nz">http://test.data.scinfo.org.nz/x/id/eodp/om/om_observation/13</gml:identifier>
+                    <om:type xlink:href="http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"/>
+                    <om:phenomenonTime>
+                        <gml:TimePeriod gml:id="gml.timeperiod.13">
+                            <gml:beginPosition>2012-06-12T12:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2012-06-13T12:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </om:phenomenonTime>
+                    <om:resultTime>
+                        <gml:TimeInstant gml:id="gml.timeinstant.13">
+                            <gml:timePosition>2014-09-18T21:37:59.228Z</gml:timePosition>
+                        </gml:TimeInstant>
+                    </om:resultTime>
+                    <om:validTime xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:procedure xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/om/om_process/3000000000002"/>
+                    <om:observedProperty xlink:href="http://test.data.scinfo.org.nz/x/def/propertytype/eodp/soilmoisture-4"/>
+                    <om:featureOfInterest xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/sams/sf_spatialsamplingfeature/2000000000002"/>
+                    <om:resultQuality xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:result xlink:href="http://www.opengis.net/def/nil/OGC/0/withheld"/>
+                </om:OM_Observation>
+            </sam:relatedObservation>
+            <sam:relatedObservation>
+                <om:OM_Observation gml:id="eodp.om.om_observation.14">
+                    <gml:identifier codeSpace="http://www.landcareresearch.co.nz">http://test.data.scinfo.org.nz/x/id/eodp/om/om_observation/14</gml:identifier>
+                    <om:type xlink:href="http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"/>
+                    <om:phenomenonTime>
+                        <gml:TimePeriod gml:id="gml.timeperiod.14">
+                            <gml:beginPosition>2012-06-10T12:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2012-06-16T12:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </om:phenomenonTime>
+                    <om:resultTime>
+                        <gml:TimeInstant gml:id="gml.timeinstant.14">
+                            <gml:timePosition>2014-09-18T21:37:59.228Z</gml:timePosition>
+                        </gml:TimeInstant>
+                    </om:resultTime>
+                    <om:validTime xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:procedure xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/om/om_process/3000000000002"/>
+                    <om:observedProperty xlink:href="http://test.data.scinfo.org.nz/x/def/propertytype/eodp/soiltemperature-1"/>
+                    <om:featureOfInterest xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/sams/sf_spatialsamplingfeature/2000000000002"/>
+                    <om:resultQuality xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:result xlink:href="http://www.opengis.net/def/nil/OGC/0/withheld"/>
+                </om:OM_Observation>
+            </sam:relatedObservation>
+            <sam:relatedObservation>
+                <om:OM_Observation gml:id="eodp.om.om_observation.15">
+                    <gml:identifier codeSpace="http://www.landcareresearch.co.nz">http://test.data.scinfo.org.nz/x/id/eodp/om/om_observation/15</gml:identifier>
+                    <om:type xlink:href="http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"/>
+                    <om:phenomenonTime>
+                        <gml:TimePeriod gml:id="gml.timeperiod.15">
+                            <gml:beginPosition>2012-06-12T12:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2012-06-13T12:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </om:phenomenonTime>
+                    <om:resultTime>
+                        <gml:TimeInstant gml:id="gml.timeinstant.15">
+                            <gml:timePosition>2014-09-18T21:37:59.228Z</gml:timePosition>
+                        </gml:TimeInstant>
+                    </om:resultTime>
+                    <om:validTime xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:procedure xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/om/om_process/3000000000002"/>
+                    <om:observedProperty xlink:href="http://test.data.scinfo.org.nz/x/def/propertytype/eodp/soiltemperature-2"/>
+                    <om:featureOfInterest xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/sams/sf_spatialsamplingfeature/2000000000002"/>
+                    <om:resultQuality xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:result xlink:href="http://www.opengis.net/def/nil/OGC/0/withheld"/>
+                </om:OM_Observation>
+            </sam:relatedObservation>
+            <sam:relatedObservation>
+                <om:OM_Observation gml:id="eodp.om.om_observation.16">
+                    <gml:identifier codeSpace="http://www.landcareresearch.co.nz">http://test.data.scinfo.org.nz/x/id/eodp/om/om_observation/16</gml:identifier>
+                    <om:type xlink:href="http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"/>
+                    <om:phenomenonTime>
+                        <gml:TimePeriod gml:id="gml.timeperiod.16">
+                            <gml:beginPosition>2012-06-12T12:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2012-06-13T12:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </om:phenomenonTime>
+                    <om:resultTime>
+                        <gml:TimeInstant gml:id="gml.timeinstant.16">
+                            <gml:timePosition>2014-09-18T21:37:59.228Z</gml:timePosition>
+                        </gml:TimeInstant>
+                    </om:resultTime>
+                    <om:validTime xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:procedure xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/om/om_process/3000000000002"/>
+                    <om:observedProperty xlink:href="http://test.data.scinfo.org.nz/x/def/propertytype/eodp/soiltemperature-2cm"/>
+                    <om:featureOfInterest xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/sams/sf_spatialsamplingfeature/2000000000002"/>
+                    <om:resultQuality xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:result xlink:href="http://www.opengis.net/def/nil/OGC/0/withheld"/>
+                </om:OM_Observation>
+            </sam:relatedObservation>
+            <sam:relatedObservation>
+                <om:OM_Observation gml:id="eodp.om.om_observation.17">
+                    <gml:identifier codeSpace="http://www.landcareresearch.co.nz">http://test.data.scinfo.org.nz/x/id/eodp/om/om_observation/17</gml:identifier>
+                    <om:type xlink:href="http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"/>
+                    <om:phenomenonTime>
+                        <gml:TimePeriod gml:id="gml.timeperiod.17">
+                            <gml:beginPosition>2012-06-12T12:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2012-06-13T12:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </om:phenomenonTime>
+                    <om:resultTime>
+                        <gml:TimeInstant gml:id="gml.timeinstant.17">
+                            <gml:timePosition>2014-09-18T21:37:59.228Z</gml:timePosition>
+                        </gml:TimeInstant>
+                    </om:resultTime>
+                    <om:validTime xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:procedure xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/om/om_process/3000000000002"/>
+                    <om:observedProperty xlink:href="http://test.data.scinfo.org.nz/x/def/propertytype/eodp/soiltemperature-3"/>
+                    <om:featureOfInterest xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/sams/sf_spatialsamplingfeature/2000000000002"/>
+                    <om:resultQuality xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:result xlink:href="http://www.opengis.net/def/nil/OGC/0/withheld"/>
+                </om:OM_Observation>
+            </sam:relatedObservation>
+            <sam:relatedObservation>
+                <om:OM_Observation gml:id="eodp.om.om_observation.18">
+                    <gml:identifier codeSpace="http://www.landcareresearch.co.nz">http://test.data.scinfo.org.nz/x/id/eodp/om/om_observation/18</gml:identifier>
+                    <om:type xlink:href="http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"/>
+                    <om:phenomenonTime>
+                        <gml:TimePeriod gml:id="gml.timeperiod.18">
+                            <gml:beginPosition>2012-06-12T12:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2012-06-13T12:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </om:phenomenonTime>
+                    <om:resultTime>
+                        <gml:TimeInstant gml:id="gml.timeinstant.18">
+                            <gml:timePosition>2014-09-18T21:37:59.228Z</gml:timePosition>
+                        </gml:TimeInstant>
+                    </om:resultTime>
+                    <om:validTime xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:procedure xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/om/om_process/3000000000002"/>
+                    <om:observedProperty xlink:href="http://test.data.scinfo.org.nz/x/def/propertytype/eodp/soiltemperature-4"/>
+                    <om:featureOfInterest xlink:href="http://test.data.scinfo.org.nz/x/id/eodp/sams/sf_spatialsamplingfeature/2000000000002"/>
+                    <om:resultQuality xlink:href="http://www.opengis.net/def/nil/OGC/0/inapplicable"/>
+                    <om:result xlink:href="http://www.opengis.net/def/nil/OGC/0/withheld"/>
+                </om:OM_Observation>
+            </sam:relatedObservation>
+            <sams:shape>
+                <gml:Point gml:id="sams.shape.2000000000002" srsDimension="2" srsName="http://www.opengis.net/gml/srs/epsg.xml#4326">
+                    <gml:pos>171.927012 -43.591301</gml:pos>
+                </gml:Point>
+            </sams:shape>
+        </sams:SF_SpatialSamplingFeature>
+    </wfs:member>
+    <wfs:member>
+        <sams:SF_SpatialSamplingFeature gml:id="eodp.sams.sf_spatialsamplingfeature.2000000000003">
+            <gml:description>Sensor Platform located on the mast at the Hororata study area shed.</gml:description>
+            <gml:identifier codeSpace="http://www.landcareresearch.co.nz">http://test.data.scinfo.org.nz/x/id/eodp/sams/sf_spatialsamplingfeature/2000000000003</gml:identifier>
+            <gml:name codeSpace="http://www.landcareresearch.co.nz">Hororata Sensor Platform (shed mast)</gml:name>
+            <gml:name codeSpace="http://someotherparty.example.org.nz">MS.SI.2000000000003</gml:name>
+            <sam:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"/>
+            <sam:sampledFeature xsi:nil="true" nilReason="missing"/>
+            <sams:shape>
+                <gml:Point gml:id="sams.shape.2000000000003" srsDimension="2" srsName="http://www.opengis.net/gml/srs/epsg.xml#4326">
+                    <gml:pos>171.92845 -43.592498</gml:pos>
+                </gml:Point>
+            </sams:shape>
+        </sams:SF_SpatialSamplingFeature>
+    </wfs:member>
+</wfs:FeatureCollection>

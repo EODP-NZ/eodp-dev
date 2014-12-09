@@ -1,0 +1,5 @@
+<namespace>
+  <id>sam_namespace</id>
+  <prefix>sam</prefix>
+  <uri>http://www.opengis.net/sampling/2.0</uri>
+</namespace> 

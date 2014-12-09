@@ -1,0 +1,83 @@
+<?xml version="1.0" ?>
+<!--For Snowflake Go Publisher-->
+<wfs:GetFeature service="WFS" version="2.0.0" outputFormat="application/gml+xml; version=3.2"
+    xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:om="http://www.opengis.net/om/2.0"
+    xmlns:wfs="http://www.opengis.net/wfs/2.0" xmlns:fes="http://www.opengis.net/fes/2.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xsi:schemaLocation="http://www.opengis.net/wfs/2.0 http://schemas.opengis.net/wfs/2.0/wfs.xsd
+    http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/temporal.xsd">
+    <wfs:Query typeNames="sams:SF_SpatialSamplingFeature">
+        <fes:Filter>
+            <fes:And>
+                <fes:Intersects>
+                    <fes:ValueReference>sams:shape</fes:ValueReference>
+                    <gml:Polygon srsName="urn:ogc:def:crs:EPSG::4326" gml:id="gml.polygon.id">
+                        <gml:exterior>
+                            <gml:LinearRing>
+                                <gml:posList srsDimension="2" count="5">-43.593 171.9285 -43.593 171.927 -43.591 171.927 -43.591 171.9285 -43.593 171.9285</gml:posList>
+                            </gml:LinearRing>
+                        </gml:exterior>
+                    </gml:Polygon>
+                </fes:Intersects>
+                <fes:PropertyIsEqualTo>
+                    <fes:ValueReference>sam:relatedObservation/om:OM_Observation/om:observedProperty/@xlink:href</fes:ValueReference>
+                    <fes:Literal>http://test.data.scinfo.org.nz/x/def/propertytype/eodp/soilmoisture-1</fes:Literal>
+                </fes:PropertyIsEqualTo>
+                <fes:AnyInteracts>
+                    <fes:ValueReference>sam:relatedObservation/om:OM_Observation/om:phenomenonTime</fes:ValueReference>
+                    <fes:Literal>
+                        <gml:TimePeriod gml:id="gml.timeperiod.id">
+                            <gml:beginPosition>2012-06-11T00:00:00.000+12</gml:beginPosition>
+                            <gml:endPosition>2012-06-12T00:00:00.000+12</gml:endPosition>
+                        </gml:TimePeriod>
+                    </fes:Literal>
+                </fes:AnyInteracts>
+            </fes:And>
+        </fes:Filter>
+    </wfs:Query>
+</wfs:GetFeature>
+
+<!--For Geoserver-->
+<wfs:GetFeature service="WFS" version="2.0.0" outputFormat="application/gml+xml; version=3.2"
+    xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:om="http://www.opengis.net/om/2.0"
+    xmlns:wfs="http://www.opengis.net/wfs/2.0" xmlns:fes="http://www.opengis.net/fes/2.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xsi:schemaLocation="http://www.opengis.net/wfs/2.0 http://schemas.opengis.net/wfs/2.0/wfs.xsd
+    http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/temporal.xsd">
+    <wfs:Query typeNames="om:OM_Observation">
+        <fes:Filter>
+          <fes:And>
+            <fes:Intersects>
+              <fes:ValueReference>om:featureOfInterest/sams:SF_SpatialSamplingFeature/sams:shape</fes:ValueReference>
+              <gml:Polygon srsName="urn:ogc:def:crs:EPSG::4326" gml:id="gml.polygon.id">
+                <gml:exterior>
+                  <gml:LinearRing>
+                    <gml:posList srsDimension="2" count="5">-43.593 171.9285 -43.593 171.927 -43.591 171.927 -43.591 171.9285 -43.593 171.9285</gml:posList>
+                  </gml:LinearRing>
+                </gml:exterior>
+              </gml:Polygon>
+            </fes:Intersects>
+            <fes:PropertyIsEqualTo>
+              <fes:ValueReference>om:observedProperty/@xlink:href</fes:ValueReference>
+              <fes:Literal>http://test.data.scinfo.org.nz/x/def/propertytype/eodp/soilmoisture-1</fes:Literal>
+            </fes:PropertyIsEqualTo>
+            <fes:After>
+              <fes:ValueReference>om:phenomenonTime/gml:TimePeriod/gml:endPosition</fes:ValueReference>
+          	  <fes:Literal>
+                <gml:TimeInstant gml:id="gml.timeinstant.1">
+              	  <gml:timePosition>2012-06-11T00:00:00.000+12:00</gml:timePosition><!--BEGIN-->
+                </gml:TimeInstant>
+              </fes:Literal>
+            </fes:After>
+            <fes:Before>
+              <fes:ValueReference>om:phenomenonTime/gml:TimePeriod/gml:beginPosition</fes:ValueReference>
+          	  <fes:Literal>
+                <gml:TimeInstant gml:id="gml.timeinstant.1">
+                  <gml:timePosition>2012-06-12T00:00:00.000+12:00</gml:timePosition><!--END-->
+                </gml:TimeInstant>
+              </fes:Literal>
+            </fes:Before>
+          </fes:And>
+        </fes:Filter>
+    </wfs:Query>
+</wfs:GetFeature>

@@ -1,0 +1,28 @@
+<featureType>
+    <id>sams_SF_SpatialSamplingFeature</id>
+    <name>SF_SpatialSamplingFeature</name>
+    <nativeName>SF_SpatialSamplingFeature</nativeName>
+    <namespace>
+        <id>sams_namespace</id>
+    </namespace>
+    <title>SF_SpatialSamplingFeature</title>
+    <abstract>When observations are made to estimate properties of a geospatial feature, in particular where the value of a property varies within the scope of the feature, a spatial sampling feature is used. Depending on accessibility and on the nature of the expected property variation, the sampling feature may be extensive in one, two or three spatial dimensions. Processing and visualization methods are often dependent on the topological dimension of the sampling manifold, so this provides a natural classification system for sampling features. This classification follows common practice in focussing on conventional spatial dimensions. Properties observed on sampling features may be time-dependent, but the temporal axis does not generally contribute to the classification of sampling feature classes. Sampling feature identity is usually less time-dependent than is the property value.</abstract>
+    <srs>EPSG:4326</srs>
+    <latLonBoundingBox>
+		<minx>171</minx><maxx>172</maxx>
+		<miny>-44</miny><maxy>-43</maxy>
+        <crs>EPSG:4326</crs>
+    </latLonBoundingBox>
+    <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+    <enabled>true</enabled>
+    <metadata>
+        <entry key="kml.regionateFeatureLimit">10</entry>
+        <entry key="indexingEnabled">false</entry>
+        <entry key="cachingEnabled">false</entry>
+    </metadata>
+    <store class="dataStore">
+        <id>sams_SF_SpatialSamplingFeature_datastore</id>
+    </store>
+    <maxFeatures>0</maxFeatures>
+    <numDecimals>0</numDecimals>
+</featureType>

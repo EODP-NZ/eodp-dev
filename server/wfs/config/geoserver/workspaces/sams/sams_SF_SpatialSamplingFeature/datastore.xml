@@ -1,0 +1,13 @@
+<dataStore>
+    <id>sams_SF_SpatialSamplingFeature_datastore</id>
+    <name>sams_SF_SpatialSamplingFeature</name>
+    <enabled>true</enabled>
+    <workspace>
+        <id>sams_workspace</id>
+    </workspace>
+    <connectionParameters>
+        <entry key="namespace">http://www.opengis.net/sams/2.0</entry>
+        <entry key="url">file:workspaces/sams/sams_SF_SpatialSamplingFeature/sams_SF_SpatialSamplingFeature.xml</entry>
+        <entry key="dbtype">app-schema</entry>
+    </connectionParameters>
+</dataStore>

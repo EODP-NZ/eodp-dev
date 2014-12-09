@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfgp:GoPublisherProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="lcr-beacon-farm-wfs" xsi:schemaLocation="http://www.snowflakesoftware.co.uk/publisher/3.0 jar:file:/C:/Program%20Files/GOPublisherv3.0.3/jar/go-publisher-lib-3.0.3.jar!/schema/projectdoc.xsd" xmlns:sfgp="http://www.snowflakesoftware.co.uk/publisher/3.0">
+<sfgp:SoftwareProduct buildDate="2014-05-15 12:40" buildNumber="0496d02" name="publisher" version="3.0.3"/>
+<sfgp:RuntimeController autoGrouping="true" batchSize="20" compression="None" copySchemas="false" encoding="UTF-8" formatOutput="true" formatOutputIndent="2" multiQuery="true" useQuotes="false" validateOutput="false" wfsCompression="None"/>
+<sfdb:PostgreSQLDataSource xmlns:sfdb="http://www.snowflakesoftware.com/datasource">
+<sfdb:user>wxsadmin</sfdb:user>
+<sfdb:password>g4gfg17geg50g5b</sfdb:password>
+<sfdb:databaseName>eodp</sfdb:databaseName>
+<sfdb:portNumber>5432</sfdb:portNumber>
+<sfdb:serverName>dev.liberator.zen.landcareresearch.co.nz</sfdb:serverName>
+</sfdb:PostgreSQLDataSource>
+<sfgp:SchemaLocationModel>
+<sfgp:schemaRepository>file:/C:/Program%20Files/GOPublisherv3.0.3/schema/</sfgp:schemaRepository>
+<sfgp:schemaLocation>
+<sfgp:locationPath>http://schemas.opengis.net/wfs/2.0/wfs.xsd</sfgp:locationPath>
+<sfgp:locationPath>http://schemas.opengis.net/sensorML/2.0/sensorML.xsd</sfgp:locationPath>
+<sfgp:locationPath>http://schemas.opengis.net/om/2.0/observation.xsd</sfgp:locationPath>
+<sfgp:locationPath>http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd</sfgp:locationPath>
+</sfgp:schemaLocation>
+<sfgp:defaultGeometrySchema>unknown</sfgp:defaultGeometrySchema>
+<sfgp:namespaces prefixMapping="true">
+<sfgp:namespaceMap>
+<sfgp:entry prefix="gmd" url="http://www.isotc211.org/2005/gmd"/>
+<sfgp:entry prefix="xs" url="http://www.w3.org/2001/XMLSchema"/>
+<sfgp:entry prefix="swe" url="http://www.opengis.net/swe/2.0"/>
+<sfgp:entry prefix="gts" url="http://www.isotc211.org/2005/gts"/>
+<sfgp:entry prefix="sam" url="http://www.opengis.net/sampling/2.0"/>
+<sfgp:entry prefix="sfgp" url="http:://www.snowflakesoftware.co.uk/publisher"/>
+<sfgp:entry prefix="ogc" url="http://www.opengis.net/ogc"/>
+<sfgp:entry prefix="om" url="http://www.opengis.net/om/2.0"/>
+<sfgp:entry prefix="kml" url="http://www.opengis.net/kml/2.2"/>
+<sfgp:entry prefix="sams" url="http://www.opengis.net/samplingSpatial/2.0"/>
+<sfgp:entry prefix="xsl" url="http://www.w3.org/1999/XSL/Transform"/>
+<sfgp:entry prefix="fes" url="http://www.opengis.net/fes/2.0"/>
+<sfgp:entry prefix="svg" url="http://www.w3.org/2000/svg"/>
+<sfgp:entry prefix="gco" url="http://www.isotc211.org/2005/gco"/>
+<sfgp:entry prefix="sml" url="http://www.opengis.net/sensorml/2.0"/>
+<sfgp:entry prefix="xml" url="http://www.w3.org/XML/1998/namespace"/>
+<sfgp:entry prefix="env" url="http://www.w3.org/2003/05/soap-envelope"/>
+<sfgp:entry prefix="gsr" url="http://www.isotc211.org/2005/gsr"/>
+<sfgp:entry prefix="gss" url="http://www.isotc211.org/2005/gss"/>
+<sfgp:entry prefix="glwu" url="http://www.snowflakesoftware.com/schema/goloaderworkflow/update"/>
+<sfgp:entry prefix="osgb" url="http://www.ordnancesurvey.co.uk/xml/namespaces/osgb"/>
+<sfgp:entry prefix="wfs" url="http://www.opengis.net/wfs/2.0"/>
+<sfgp:entry prefix="ows" url="http://www.opengis.net/ows/1.1"/>
+<sfgp:entry prefix="xsd" url="http://www.w3.org/2001/XMLSchema"/>
+<sfgp:entry prefix="xlink" url="http://www.w3.org/1999/xlink"/>
+<sfgp:entry prefix="gml" url="http://www.opengis.net/gml/3.2"/>
+<sfgp:entry prefix="soap" url="http://schemas.xmlsoap.org/soap/envelope/"/>
+<sfgp:entry prefix="xsi" url="http://www.w3.org/2001/XMLSchema-instance"/>
+</sfgp:namespaceMap>
+</sfgp:namespaces>
+</sfgp:SchemaLocationModel>
+<sfgp:ModelSpecification mbr="false" mimeType="text/xml" renameElements="true" rootName="wfs:FeatureCollection">
+<sfgp:userComment>==============================================================================
+These are test data created solely for that purpose by Landcare Research Ltd.
+The data are not real or correct and must not be used for any analysis or
+decision making.
+==============================================================================
+Created by GO Publisher. Snowflake Software Ltd. (http://www.snowflakesoftware.com).</sfgp:userComment>
+<sfgp:GeometrySettings coordinateDimension="-1" gml2="false" points="posList" publishingSrsId="urn:ogc:def:crs:EPSG::4326" replacementValue="0.0" sourceSrsId="urn:ogc:def:crs:EPSG::4326" surfaceMode="Default"/>
+<TimezoneSettings showInOutput="true" xmlns="http://www.snowflakesoftware.co.uk/publisher/3.0"/>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="wfs_timestamp" required="false" type="VARCHAR" value="#SYSDATE_TIME" xmlContent="false">
+<sfgp:SimpleMapping path="@timeStamp" type="xs:dateTime" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="wfs_numbermatched" required="false" type="VARCHAR" value="#FEATURES_MATCHED" xmlContent="false">
+<sfgp:SimpleMapping path="@numberMatched" type="wfs:nonNegativeIntegerOrUnknown" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="wfs_numberreturned" required="false" type="VARCHAR" value="#FEATURES_RETURNED" xmlContent="false">
+<sfgp:SimpleMapping path="@numberReturned" type="xs:nonNegativeInteger" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:Table dbname="observationdiscovery" decomposable="false" enabled="true" name="wxs.observationdiscovery" queryDateTime="observationdiscovery.phenomenontimebegin" queryGeometry="" schemaName="wxs" uniqueKey="">
+<sfgp:ComplexMapping path="wfs:member/om:OM_Observation" type="om:OM_ObservationType" xsltResource=""/>
+<sfgp:Column enabled="true" name="gmlid" required="false" type="text">
+<sfgp:SimpleMapping path="@gml:id" type="xs:ID"/>
+</sfgp:Column>
+<sfgp:Group complex="true" enabled="true" name="gml_metadataproperty_sos" required="false" separator="">
+<sfgp:ComplexMapping path="gml:metaDataProperty/gml:GenericMetaData" type="gml:GenericMetaDataType" xsltResource=""/>
+<sfgp:Group complex="true" enabled="true" name="gmd_ci_onlineresource" required="false" separator="">
+<sfgp:ComplexMapping path="gmd:CI_OnlineResource" type="gmd:CI_OnlineResource_Type" xsltResource=""/>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="gmd_linkage" required="false" type="VARCHAR" value="http://test.data.scinfo.org.nz/x/eodp-data/sos" xmlContent="false">
+<sfgp:SimpleMapping path="gmd:linkage/gmd:URL" type="xs:anyURI" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="gmd_protocol" required="false" type="VARCHAR" value="OGC:SOS-2.0.0" xmlContent="false">
+<sfgp:SimpleMapping path="gmd:protocol/gco:CharacterString" type="xs:string" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+</sfgp:Group>
+</sfgp:Group>
+<sfgp:Group complex="true" enabled="true" name="gml_metadataproperty_wfs" required="false" separator="">
+<sfgp:ComplexMapping path="gml:metaDataProperty/gml:GenericMetaData" type="gml:GenericMetaDataType" xsltResource=""/>
+<sfgp:Group complex="true" enabled="true" name="gmd_ci_onlineresource" required="false" separator="">
+<sfgp:ComplexMapping path="gmd:CI_OnlineResource" type="gmd:CI_OnlineResource_Type" xsltResource=""/>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="gmd_linkage" required="false" type="VARCHAR" value="http://test.data.scinfo.org.nz/x/eodp-data/wfs" xmlContent="false">
+<sfgp:SimpleMapping path="gmd:linkage/gmd:URL" type="xs:anyURI" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="gmd_protocol" required="false" type="VARCHAR" value="OGC:WFS-2.0.0" xmlContent="false">
+<sfgp:SimpleMapping path="gmd:protocol/gco:CharacterString" type="xs:string" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+</sfgp:Group>
+</sfgp:Group>
+<sfgp:Group complex="true" enabled="true" name="gml_identifier" required="false" separator="">
+<sfgp:ComplexMapping path="gml:identifier" type="gml:CodeWithAuthorityType" xsltResource=""/>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="codespace" required="false" type="VARCHAR" value="http://www.landcareresearch.co.nz" xmlContent="false">
+<sfgp:SimpleMapping path="@codeSpace" type="xs:anyURI" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:Column enabled="true" name="gmlidentifier" required="false" type="text">
+<sfgp:SimpleMapping path="." type="gml:CodeWithAuthorityType"/>
+</sfgp:Column>
+</sfgp:Group>
+<sfgp:Column enabled="true" name="observationtypeuri" required="false" type="varchar">
+<sfgp:SimpleMapping path="om:type/@xlink:href" type="xlink:hrefType"/>
+</sfgp:Column>
+<sfgp:Group complex="true" enabled="true" name="om_phenomenontime" required="false" separator="">
+<sfgp:ComplexMapping path="om:phenomenonTime/gml:TimePeriod" type="gml:TimePeriodType" xsltResource=""/>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="gml_id" required="false" type="VARCHAR" value="#GENERATED_ID" xmlContent="false">
+<sfgp:SimpleMapping path="@id" type="xs:ID" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:Column enabled="true" name="phenomenontimebegin" required="false" type="timestamp">
+<sfgp:SimpleMapping path="gml:beginPosition" type="gml:TimePositionType"/>
+</sfgp:Column>
+<sfgp:Column enabled="true" name="phenomenontimeend" required="false" type="timestamp">
+<sfgp:SimpleMapping path="gml:endPosition" type="gml:TimePositionType"/>
+</sfgp:Column>
+</sfgp:Group>
+<sfgp:Group complex="true" enabled="true" name="om_resulttime" required="false" separator="">
+<sfgp:ComplexMapping path="om:resultTime/gml:TimeInstant" type="gml:TimeInstantType" xsltResource=""/>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="gml_id" required="false" type="VARCHAR" value="#GENERATED_ID" xmlContent="false">
+<sfgp:SimpleMapping path="@id" type="xs:ID" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:Column enabled="true" name="resulttime" required="false" type="timestamptz">
+<sfgp:SimpleMapping path="gml:timePosition" type="gml:TimePositionType"/>
+</sfgp:Column>
+</sfgp:Group>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="om_validtime" required="false" type="VARCHAR" value="http://www.opengis.net/def/nil/OGC/0/inapplicable" xmlContent="false">
+<sfgp:SimpleMapping path="om:validTime/@xlink:href" type="xlink:hrefType" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:Column enabled="true" name="procedureuri" required="false" type="text">
+<sfgp:SimpleMapping path="om:procedure/@xlink:href" type="xlink:hrefType"/>
+</sfgp:Column>
+<sfgp:Column enabled="true" name="observedpropertyuri" required="false" type="varchar">
+<sfgp:SimpleMapping path="om:observedProperty/@xlink:href" type="xlink:hrefType"/>
+</sfgp:Column>
+<sfgp:Table dbname="samplingfeature" decomposable="true" enabled="true" name="wxs.samplingfeature_foi" queryDateTime="" queryGeometry="" schemaName="wxs" uniqueKey="">
+<sfgp:ComplexMapping path="om:featureOfInterest" type="gml:FeaturePropertyType" xsltResource=""/>
+<sfgp:Group complex="true" enabled="true" name="SWITCH" required="false" separator="">
+<sfgp:ComplexMapping path="." type="gml:FeaturePropertyType" xsltResource=""/>
+<sfgp:Column enabled="true" isId="false" isLink="true" name="LINK" required="false" type="" xmlContent="false">
+<sfgp:SimpleMapping path="@xlink:href" type="xlink:hrefType" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+<sfgp:customSQL>gmlid</sfgp:customSQL>
+</sfgp:Column>
+<sfgp:Group complex="true" enabled="true" name="_samplingfeature_foi" required="false" separator="">
+<sfgp:ComplexMapping path="sams:SF_SpatialSamplingFeature" type="sams:SF_SpatialSamplingFeatureType" xsltResource=""/>
+<sfgp:Column enabled="true" isId="true" isLink="false" name="gmlid" required="false" type="text" xmlContent="false">
+<sfgp:SimpleMapping path="@gml:id" type="xs:ID" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>Default</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:Column>
+<sfgp:Column enabled="true" name="samplingfeaturedescription" required="false" type="varchar">
+<sfgp:SimpleMapping path="gml:description" type="gml:StringOrRefType"/>
+</sfgp:Column>
+<sfgp:Group complex="true" enabled="true" name="gml_identifier" required="false" separator="">
+<sfgp:ComplexMapping path="gml:identifier" type="gml:CodeWithAuthorityType" xsltResource=""/>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="codespace" required="false" type="VARCHAR" value="http://www.landcareresearch.co.nz" xmlContent="false">
+<sfgp:SimpleMapping path="@codeSpace" type="xs:anyURI" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:Column enabled="true" name="gmlidentifier" required="false" type="text">
+<sfgp:SimpleMapping path="." type="gml:CodeWithAuthorityType"/>
+</sfgp:Column>
+</sfgp:Group>
+<sfgp:Group complex="true" enabled="true" name="gml_name" required="false" separator="">
+<sfgp:ComplexMapping path="gml:name" type="gml:CodeType" xsltResource=""/>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="codespace" required="false" type="VARCHAR" value="http://www.landcareresearch.co.nz" xmlContent="false">
+<sfgp:SimpleMapping path="@codeSpace" type="xs:anyURI" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:Column enabled="true" name="samplingfeaturename" required="false" type="varchar">
+<sfgp:SimpleMapping path="." type="gml:CodeType"/>
+</sfgp:Column>
+</sfgp:Group>
+<sfgp:Group complex="true" enabled="true" name="gml_name_example" required="false" separator="">
+<sfgp:ComplexMapping path="gml:name" type="gml:CodeType" xsltResource=""/>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="codespace" required="false" type="VARCHAR" value="http://someotherparty.example.org.nz" xmlContent="false">
+<sfgp:SimpleMapping path="@codeSpace" type="xs:anyURI" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:Column enabled="true" isId="false" isLink="false" name="gml_name_example" required="false" type="" xmlContent="false">
+<sfgp:SimpleMapping path="." type="gml:CodeType" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+<sfgp:customSQL>'MS.SI.' || B.samplingfeatureid</sfgp:customSQL>
+</sfgp:Column>
+</sfgp:Group>
+<sfgp:Column enabled="true" name="samplingfeaturetypeuri" required="false" type="varchar">
+<sfgp:SimpleMapping path="sam:type/@xlink:href" type="xlink:hrefType"/>
+</sfgp:Column>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="sam_sampledfeature" required="false" type="VARCHAR" value="missing" xmlContent="false">
+<sfgp:SimpleMapping path="sam:sampledFeature/@gml:nilReason" type="gml:NilReasonType" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:Column enabled="true" name="shape" required="false" type="geometry">
+<sfgp:SimpleMapping path="sams:shape" type="sams:shapeType"/>
+</sfgp:Column>
+<sfgp:Column enabled="true" name="samplingfeatureid" required="false" type="int8"/>
+<sfgp:Column enabled="true" name="positionalaccuracy" required="false" type="numeric"/>
+</sfgp:Group>
+</sfgp:Group>
+<sfgp:ChildParentJoin childKey="samplingfeatureid" parentKey="samplingfeatureid"/>
+</sfgp:Table>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="om_resultquality" required="false" type="VARCHAR" value="http://www.opengis.net/def/nil/OGC/0/inapplicable" xmlContent="false">
+<sfgp:SimpleMapping path="om:resultQuality/@xlink:href" type="xlink:hrefType" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="om_result" required="false" type="VARCHAR" value="http://www.opengis.net/def/nil/OGC/0/withheld" xmlContent="false">
+<sfgp:SimpleMapping path="om:result" type="xs:anyType" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:Column enabled="true" name="processid" required="false" type="int8"/>
+<sfgp:Column enabled="true" name="samplingfeatureid" required="false" type="int8"/>
+<sfgp:Column enabled="true" name="observationid" required="false" type="int8"/>
+<sfgp:Column enabled="true" name="samplingfeatureuri" required="false" type="text"/>
+</sfgp:Table>
+<sfgp:Table dbname="samplingfeature" decomposable="false" enabled="true" name="wxs.samplingfeature" queryDateTime="" queryGeometry="samplingfeature.shape" schemaName="wxs">
+<sfgp:ComplexMapping path="wfs:member/sams:SF_SpatialSamplingFeature" type="sams:SF_SpatialSamplingFeatureType"/>
+<sfgp:Column enabled="true" name="gmlid" required="false" type="text">
+<sfgp:SimpleMapping path="@gml:id" type="xs:ID"/>
+</sfgp:Column>
+<sfgp:Group complex="true" enabled="true" name="gml_metadataproperty_sos" required="false" separator="">
+<sfgp:ComplexMapping path="gml:metaDataProperty/gml:GenericMetaData" type="gml:GenericMetaDataType" xsltResource=""/>
+<sfgp:Group complex="true" enabled="true" name="gmd_ci_onlineresource" required="false" separator="">
+<sfgp:ComplexMapping path="gmd:CI_OnlineResource" type="gmd:CI_OnlineResource_Type" xsltResource=""/>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="gmd_linkage" required="false" type="VARCHAR" value="http://test.data.scinfo.org.nz/x/eodp-data/sos" xmlContent="false">
+<sfgp:SimpleMapping path="gmd:linkage/gmd:URL" type="xs:anyURI" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="gmd_protocol" required="false" type="VARCHAR" value="OGC:SOS-2.0.0" xmlContent="false">
+<sfgp:SimpleMapping path="gmd:protocol/gco:CharacterString" type="xs:string" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+</sfgp:Group>
+</sfgp:Group>
+<sfgp:Group complex="true" enabled="true" name="gml_metadataproperty_wfs" required="false" separator="">
+<sfgp:ComplexMapping path="gml:metaDataProperty/gml:GenericMetaData" type="gml:GenericMetaDataType" xsltResource=""/>
+<sfgp:Group complex="true" enabled="true" name="gmd_ci_onlineresource" required="false" separator="">
+<sfgp:ComplexMapping path="gmd:CI_OnlineResource" type="gmd:CI_OnlineResource_Type" xsltResource=""/>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="gmd_linkage" required="false" type="VARCHAR" value="http://test.data.scinfo.org.nz/x/eodp-data/wfs" xmlContent="false">
+<sfgp:SimpleMapping path="gmd:linkage/gmd:URL" type="xs:anyURI" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="gmd_protocol" required="false" type="VARCHAR" value="OGC:WFS-2.0.0" xmlContent="false">
+<sfgp:SimpleMapping path="gmd:protocol/gco:CharacterString" type="xs:string" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+</sfgp:Group>
+</sfgp:Group>
+<sfgp:Column enabled="true" name="samplingfeaturedescription" required="false" type="varchar">
+<sfgp:SimpleMapping path="gml:description" type="gml:StringOrRefType"/>
+</sfgp:Column>
+<sfgp:Group complex="true" enabled="true" name="gml_identifier" required="false" separator="">
+<sfgp:ComplexMapping path="gml:identifier" type="gml:CodeWithAuthorityType" xsltResource=""/>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="codespace" required="false" type="VARCHAR" value="http://www.landcareresearch.co.nz" xmlContent="false">
+<sfgp:SimpleMapping path="@codeSpace" type="xs:anyURI" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:Column enabled="true" name="gmlidentifier" required="false" type="text">
+<sfgp:SimpleMapping path="." type="gml:CodeWithAuthorityType"/>
+</sfgp:Column>
+</sfgp:Group>
+<sfgp:Group complex="true" enabled="true" name="gml_name" required="false" separator="">
+<sfgp:ComplexMapping path="gml:name" type="gml:CodeType" xsltResource=""/>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="codespace" required="false" type="VARCHAR" value="http://www.landcareresearch.co.nz" xmlContent="false">
+<sfgp:SimpleMapping path="@codeSpace" type="xs:anyURI" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:Column enabled="true" name="samplingfeaturename" required="false" type="varchar">
+<sfgp:SimpleMapping path="." type="gml:CodeType"/>
+</sfgp:Column>
+</sfgp:Group>
+<sfgp:Group complex="true" enabled="true" name="gml_name_example" required="false" separator="">
+<sfgp:ComplexMapping path="gml:name" type="gml:CodeType" xsltResource=""/>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="codespace" required="false" type="VARCHAR" value="http://someotherparty.example.org.nz" xmlContent="false">
+<sfgp:SimpleMapping path="@codeSpace" type="xs:anyURI" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:Column enabled="true" isId="false" isLink="false" name="gml_name_example" required="false" type="" xmlContent="false">
+<sfgp:SimpleMapping path="." type="gml:CodeType" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+<sfgp:customSQL>'MS.SI.' || A.samplingfeatureid</sfgp:customSQL>
+</sfgp:Column>
+</sfgp:Group>
+<sfgp:Column enabled="true" name="samplingfeaturetypeuri" required="false" type="varchar">
+<sfgp:SimpleMapping path="sam:type/@xlink:href" type="xlink:hrefType"/>
+</sfgp:Column>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="sam_sampledfeature" required="false" type="VARCHAR" value="missing" xmlContent="false">
+<sfgp:SimpleMapping path="sam:sampledFeature/@gml:nilReason" type="gml:NilReasonType" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:Table dbname="observationdiscovery" decomposable="false" enabled="true" name="wxs.observationdiscovery_ro" queryDateTime="" queryGeometry="" schemaName="wxs" uniqueKey="">
+<sfgp:ComplexMapping path="sam:relatedObservation/om:OM_Observation" type="om:OM_ObservationType" xsltResource=""/>
+<sfgp:Column enabled="true" isId="true" isLink="false" name="gmlid" required="false" type="text" xmlContent="false">
+<sfgp:SimpleMapping path="@gml:id" type="xs:ID" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>Default</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:Column>
+<sfgp:Group complex="true" enabled="true" name="gml_identifier" required="false" separator="">
+<sfgp:ComplexMapping path="gml:identifier" type="gml:CodeWithAuthorityType" xsltResource=""/>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="codespace" required="false" type="VARCHAR" value="http://www.landcareresearch.co.nz" xmlContent="false">
+<sfgp:SimpleMapping path="@codeSpace" type="xs:anyURI" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:Column enabled="true" name="gmlidentifier" required="false" type="text">
+<sfgp:SimpleMapping path="." type="gml:CodeWithAuthorityType"/>
+</sfgp:Column>
+</sfgp:Group>
+<sfgp:Column enabled="true" name="observationtypeuri" required="false" type="varchar">
+<sfgp:SimpleMapping path="om:type/@xlink:href" type="xlink:hrefType"/>
+</sfgp:Column>
+<sfgp:Group complex="true" enabled="true" name="om_phenomenontime" required="false" separator="">
+<sfgp:ComplexMapping path="om:phenomenonTime/gml:TimePeriod" type="gml:TimePeriodType" xsltResource=""/>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="gml_id" required="false" type="VARCHAR" value="#GENERATED_ID" xmlContent="false">
+<sfgp:SimpleMapping path="@id" type="xs:ID" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:Column enabled="true" name="phenomenontimebegin" required="false" type="timestamp">
+<sfgp:SimpleMapping path="gml:beginPosition" type="gml:TimePositionType"/>
+</sfgp:Column>
+<sfgp:Column enabled="true" name="phenomenontimeend" required="false" type="timestamp">
+<sfgp:SimpleMapping path="gml:endPosition" type="gml:TimePositionType"/>
+</sfgp:Column>
+</sfgp:Group>
+<sfgp:Group complex="true" enabled="true" name="om_resulttime" required="false" separator="">
+<sfgp:ComplexMapping path="om:resultTime/gml:TimeInstant" type="gml:TimeInstantType" xsltResource=""/>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="gml_id" required="false" type="VARCHAR" value="#GENERATED_ID" xmlContent="false">
+<sfgp:SimpleMapping path="@id" type="xs:ID" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:Column enabled="true" name="resulttime" required="false" type="timestamptz">
+<sfgp:SimpleMapping path="gml:timePosition" type="gml:TimePositionType"/>
+</sfgp:Column>
+</sfgp:Group>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="om_validtime" required="false" type="VARCHAR" value="http://www.opengis.net/def/nil/OGC/0/inapplicable" xmlContent="false">
+<sfgp:SimpleMapping path="om:validTime/@xlink:href" type="xlink:hrefType" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:Column enabled="true" name="procedureuri" required="false" type="text">
+<sfgp:SimpleMapping path="om:procedure/@xlink:href" type="xlink:hrefType"/>
+</sfgp:Column>
+<sfgp:Column enabled="true" name="observedpropertyuri" required="false" type="varchar">
+<sfgp:SimpleMapping path="om:observedProperty/@xlink:href" type="xlink:hrefType"/>
+</sfgp:Column>
+<sfgp:Column enabled="true" name="samplingfeatureuri" required="false" type="text">
+<sfgp:SimpleMapping path="om:featureOfInterest/@xlink:href" type="xlink:hrefType"/>
+</sfgp:Column>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="om_resultquality" required="false" type="VARCHAR" value="http://www.opengis.net/def/nil/OGC/0/inapplicable" xmlContent="false">
+<sfgp:SimpleMapping path="om:resultQuality/@xlink:href" type="xlink:hrefType" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:ConstantColumn enabled="true" isId="false" isLink="false" name="om_result" required="false" type="VARCHAR" value="http://www.opengis.net/def/nil/OGC/0/withheld" xmlContent="false">
+<sfgp:SimpleMapping path="om:result" type="xs:anyType" xsltResource=""/>
+<sfgp:KmlProperties>
+<sfgp:altitudeMode>absolute</sfgp:altitudeMode>
+</sfgp:KmlProperties>
+</sfgp:ConstantColumn>
+<sfgp:Column enabled="true" name="samplingfeatureid" required="false" type="int8"/>
+<sfgp:Column enabled="true" name="observationid" required="false" type="int8"/>
+<sfgp:Column enabled="true" name="processid" required="false" type="int8"/>
+<sfgp:ChildParentJoin childKey="samplingfeatureid" parentKey="samplingfeatureid"/>
+</sfgp:Table>
+<sfgp:Column enabled="true" name="shape" required="false" type="geometry">
+<sfgp:SimpleMapping path="sams:shape" type="sams:shapeType"/>
+</sfgp:Column>
+<sfgp:Column enabled="true" name="samplingfeatureid" required="false" type="int8"/>
+<sfgp:Column enabled="true" name="positionalaccuracy" required="false" type="numeric"/>
+</sfgp:Table>
+</sfgp:ModelSpecification>
+<sfgp:WFSSettings allowsUnboundedPeriods="true" featureDepth="1" includeLicence="false" isTwoStage="true" restArchivePath="file:/C:/Users/ritchiea/version-control/scenzgrid/eiss-wxs-obs/deployment/eodp-rest.war" servletName="GOPublisherWFS" servletURL="/wfs" urlMapXmlPath="file:/C:/Users/ritchiea/version-control/scenzgrid/eiss-wxs-obs/config/wfs/urlMap.xml" validating="true" webArchivePath="file:/C:/Users/ritchiea/version-control/scenzgrid/eiss-wxs-obs/deployment/eodp.war">
+<ows:WGS84BoundingBox LowerCorner="-180.0 -90.0" UpperCorner="180.0 90.0" xmlns:ows="http://www.opengis.net/ows"/>
+<wfs:otherSRSList xmlns:wfs="http://www.opengis.net/wfs/2.0">
+<wfs:OtherSRS/>
+</wfs:otherSRSList>
+<wfs:WFS_Capabilities xmlns:ows="http://www.opengis.net/ows" xmlns:wfs="http://www.opengis.net/wfs" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1.0">
+<ows:ServiceIdentification>
+<ows:Title>EODP Demonstrator WFS</ows:Title>
+<ows:Abstract>Demonstrator WFS for the New Zealand Environmental Observation Data Profile (EODP). The service provides an 'out of the box' set of O&amp;M 2.0 feature types to enable the discovery of sampling stations and the phenomena they observed (and when). The data provided have been create for demonstration purposes and do not accurately reflect the state of the environment at the locations and times provided. They must not be used for analysis or decision making.</ows:Abstract>
+<ows:ServiceType>WFS</ows:ServiceType>
+<ows:ServiceTypeVersion>1.0.0</ows:ServiceTypeVersion>
+<ows:ServiceTypeVersion>1.1.0</ows:ServiceTypeVersion>
+<ows:ServiceTypeVersion>2.0.0</ows:ServiceTypeVersion>
+<ows:Fees>NONE</ows:Fees>
+<ows:AccessConstraints>Copyright © Landcare Research (New Zealand) Ltd 2014.
+These data have been created for demonstration purposes and do not accurately reflect the state of the environment at the locations and times provided. They must not be used for analysis or decision making.</ows:AccessConstraints>
+</ows:ServiceIdentification>
+<ows:ServiceProvider>
+<ows:ProviderName>Landcare Research (NZ) Ltd - Manaaki Whenua</ows:ProviderName>
+<ows:ServiceContact>
+<ows:IndividualName>Alistair Ritchie</ows:IndividualName>
+<ows:PositionName>Environmental Information and Systems Analyst</ows:PositionName>
+<ows:ContactInfo>
+<ows:Phone>
+<ows:Voice/>
+<ows:Facsimile/>
+</ows:Phone>
+<ows:Address>
+<ows:DeliveryPoint>Gerald St</ows:DeliveryPoint>
+<ows:City>Lincoln</ows:City>
+<ows:AdministrativeArea>Canterbury</ows:AdministrativeArea>
+<ows:PostalCode>7608</ows:PostalCode>
+<ows:Country>New Zealand</ows:Country>
+<ows:ElectronicMailAddress>RitchieA(at)landcareresearch.co.nz</ows:ElectronicMailAddress>
+</ows:Address>
+<ows:OnlineResource xlink:href="http://www.landcareresearch.co.nz"/>
+<ows:HoursOfService>08.30 to 16.30 (NZS/DT)</ows:HoursOfService>
+<ows:ContactInstructions>Be nice.</ows:ContactInstructions>
+</ows:ContactInfo>
+</ows:ServiceContact>
+</ows:ServiceProvider>
+<ows:OperationsMetadata>
+<ows:Operation name="GetCapabilities">
+<ows:DCP>
+<ows:HTTP>
+<ows:Get xlink:href="unknown?"/>
+<ows:Post xlink:href="unknown"/>
+</ows:HTTP>
+</ows:DCP>
+<ows:Parameter name="AcceptVersions">
+<ows:Value>2.0.0</ows:Value>
+<ows:Value>1.1.0</ows:Value>
+<ows:Value>1.0.0</ows:Value>
+</ows:Parameter>
+<ows:Parameter name="AcceptFormats">
+<ows:Value>text/xml</ows:Value>
+</ows:Parameter>
+<ows:Parameter name="Sections">
+<ows:Value>ServiceIdentification</ows:Value>
+<ows:Value>ServiceProvider</ows:Value>
+<ows:Value>OperationsMetadata</ows:Value>
+<ows:Value>FeatureTypeList</ows:Value>
+<ows:Value>ServesGMLObjectTypeList</ows:Value>
+<ows:Value>SupportsGMLObjectTypeList</ows:Value>
+<ows:Value>Filter_Capabilities</ows:Value>
+</ows:Parameter>
+</ows:Operation>
+<ows:Operation name="DescribeFeatureType">
+<ows:DCP>
+<ows:HTTP>
+<ows:Get xlink:href="unknown?"/>
+<ows:Post xlink:href="unknown"/>
+</ows:HTTP>
+</ows:DCP>
+<ows:Parameter name="outputFormat">
+<ows:Value>text/xml; subtype=gml/3.1.1</ows:Value>
+</ows:Parameter>
+</ows:Operation>
+<ows:Operation name="GetFeature">
+<ows:DCP>
+<ows:HTTP>
+<ows:Get xlink:href="unknown?"/>
+<ows:Post xlink:href="unknown"/>
+</ows:HTTP>
+</ows:DCP>
+<ows:Parameter name="resultType">
+<ows:Value>results</ows:Value>
+<ows:Value>hits</ows:Value>
+</ows:Parameter>
+<ows:Parameter name="outputFormat">
+<ows:Value>text/xml; subtype=gml/3.1.1</ows:Value>
+</ows:Parameter>
+</ows:Operation>
+<ows:Parameter name="srsName">
+<ows:Value>urn:ogc:def:crs:EPSG::4326</ows:Value>
+</ows:Parameter>
+<ows:Constraint name="ImplementsBasicWFS">
+<ows:Value>TRUE</ows:Value>
+</ows:Constraint>
+<ows:Constraint name="ImplementsTransactionalWFS">
+<ows:Value>FALSE</ows:Value>
+</ows:Constraint>
+<ows:Constraint name="ImplementsLockingWFS">
+<ows:Value>FALSE</ows:Value>
+</ows:Constraint>
+<ows:Constraint name="KVPEncoding">
+<ows:Value>TRUE</ows:Value>
+</ows:Constraint>
+<ows:Constraint name="XMLEncoding">
+<ows:Value>TRUE</ows:Value>
+</ows:Constraint>
+<ows:Constraint name="SOAPEncoding">
+<ows:Value>TRUE</ows:Value>
+</ows:Constraint>
+<ows:Constraint name="ImplementsInheritance">
+<ows:Value>FALSE</ows:Value>
+</ows:Constraint>
+<ows:Constraint name="ImplementsRemoteResolve">
+<ows:Value>FALSE</ows:Value>
+</ows:Constraint>
+<ows:Constraint name="ImplementsStandardJoins">
+<ows:Value>FALSE</ows:Value>
+</ows:Constraint>
+<ows:Constraint name="ImplementsSpatialJoins">
+<ows:Value>FALSE</ows:Value>
+</ows:Constraint>
+<ows:Constraint name="ImplementsTemporalJoins">
+<ows:Value>FALSE</ows:Value>
+</ows:Constraint>
+<ows:Constraint name="ImplementsFeatureVersioning">
+<ows:Value>FALSE</ows:Value>
+</ows:Constraint>
+<ows:Constraint name="ManageStoredQueries">
+<ows:Value>TRUE</ows:Value>
+</ows:Constraint>
+<ows:Constraint name="QueryExpressions">
+<ows:Value>wfs:Query</ows:Value>
+<ows:Value>wfs:StoredQuery</ows:Value>
+</ows:Constraint>
+<ows:Constraint name="LocalTraverseXLinkScope">
+<ows:Value>0</ows:Value>
+<ows:Value>0</ows:Value>
+</ows:Constraint>
+<ows:Constraint name="RemoteTraverseXLinkScope">
+<ows:Value>0</ows:Value>
+<ows:Value>0</ows:Value>
+</ows:Constraint>
+</ows:OperationsMetadata>
+<wfs:FeatureTypeList>
+<wfs:FeatureType>
+<wfs:Name xmlns:om="http://www.opengis.net/om/2.0">om:OM_Observation</wfs:Name>
+<wfs:Title>OM_Observation</wfs:Title>
+<wfs:Abstract>Observation is an act ("event"), whose result is an estimate of the value
+				of a property of the feature of interest. The observed property may be any property
+				associated with the type of the feature of interest.</wfs:Abstract>
+<ows:Keywords>
+<ows:Keyword>OM_Observation</ows:Keyword>
+<ows:Keyword>observationdiscovery</ows:Keyword>
+</ows:Keywords>
+<wfs:DefaultSRS>urn:ogc:def:crs:EPSG::4326</wfs:DefaultSRS>
+<ows:WGS84BoundingBox>
+<ows:LowerCorner>-180.0 -90.0</ows:LowerCorner>
+<ows:UpperCorner>180.0 90.0</ows:UpperCorner>
+</ows:WGS84BoundingBox>
+</wfs:FeatureType>
+<wfs:FeatureType>
+<wfs:Name xmlns:sams="http://www.opengis.net/samplingSpatial/2.0">sams:SF_SpatialSamplingFeature</wfs:Name>
+<wfs:Title>SF_SpatialSamplingFeature</wfs:Title>
+<wfs:Abstract> When observations are made to estimate properties of a geospatial
+				feature, in particular where the value of a property varies within the scope of the
+				feature, a spatial sampling feature is used. Depending on accessibility and on the
+				nature of the expected property variation, the sampling feature may be extensive in
+				one, two or three spatial dimensions. Processing and visualization methods are often
+				dependent on the topological dimension of the sampling manifold, so this provides a
+				natural classification system for sampling features. This classification follows
+				common practice in focussing on conventional spatial dimensions. Properties observed
+				on sampling features may be time-dependent, but the temporal axis does not generally
+				contribute to the classification of sampling feature classes. Sampling feature
+				identity is usually less time-dependent than is the property value. </wfs:Abstract>
+<ows:Keywords>
+<ows:Keyword>SF_SpatialSamplingFeature</ows:Keyword>
+<ows:Keyword>samplingfeature</ows:Keyword>
+</ows:Keywords>
+<wfs:DefaultSRS>urn:ogc:def:crs:EPSG::4326</wfs:DefaultSRS>
+<ows:WGS84BoundingBox>
+<ows:LowerCorner>-180.0 -90.0</ows:LowerCorner>
+<ows:UpperCorner>180.0 90.0</ows:UpperCorner>
+</ows:WGS84BoundingBox>
+</wfs:FeatureType>
+</wfs:FeatureTypeList>
+<ogc:Filter_Capabilities xmlns:ogc="http://www.opengis.net/ogc">
+<ogc:Spatial_Capabilities>
+<ogc:GeometryOperands>
+<ogc:GeometryOperand xmlns:gml="http://www.opengis.net/gml/3.2">gml:Envelope</ogc:GeometryOperand>
+<ogc:GeometryOperand xmlns:gml="http://www.opengis.net/gml/3.2">gml:Point</ogc:GeometryOperand>
+<ogc:GeometryOperand xmlns:gml="http://www.opengis.net/gml/3.2">gml:LineString</ogc:GeometryOperand>
+<ogc:GeometryOperand xmlns:gml="http://www.opengis.net/gml/3.2">gml:Polygon</ogc:GeometryOperand>
+<ogc:GeometryOperand xmlns:gml="http://www.opengis.net/gml/3.2">gml:Arc</ogc:GeometryOperand>
+<ogc:GeometryOperand xmlns:gml="http://www.opengis.net/gml/3.2">gml:Circle</ogc:GeometryOperand>
+</ogc:GeometryOperands>
+<ogc:SpatialOperators>
+<ogc:SpatialOperator name="BBOX"/>
+<ogc:SpatialOperator name="Equals"/>
+<ogc:SpatialOperator name="Disjoint"/>
+<ogc:SpatialOperator name="Intersects"/>
+<ogc:SpatialOperator name="Touches"/>
+<ogc:SpatialOperator name="Crosses"/>
+<ogc:SpatialOperator name="Within"/>
+<ogc:SpatialOperator name="Contains"/>
+<ogc:SpatialOperator name="Overlaps"/>
+<ogc:SpatialOperator name="Beyond"/>
+<ogc:SpatialOperator name="DWithin"/>
+</ogc:SpatialOperators>
+</ogc:Spatial_Capabilities>
+<ogc:Scalar_Capabilities>
+<ogc:LogicalOperators/>
+<ogc:ComparisonOperators>
+<ogc:ComparisonOperator>Between</ogc:ComparisonOperator>
+<ogc:ComparisonOperator>EqualTo</ogc:ComparisonOperator>
+<ogc:ComparisonOperator>GreaterThan</ogc:ComparisonOperator>
+<ogc:ComparisonOperator>GreaterThanEqualTo</ogc:ComparisonOperator>
+<ogc:ComparisonOperator>LessThan</ogc:ComparisonOperator>
+<ogc:ComparisonOperator>LessThanEqualTo</ogc:ComparisonOperator>
+<ogc:ComparisonOperator>Like</ogc:ComparisonOperator>
+<ogc:ComparisonOperator>NotEqualTo</ogc:ComparisonOperator>
+<ogc:ComparisonOperator>NullCheck</ogc:ComparisonOperator>
+</ogc:ComparisonOperators>
+<ogc:ArithmeticOperators>
+<ogc:SimpleArithmetic/>
+</ogc:ArithmeticOperators>
+</ogc:Scalar_Capabilities>
+<ogc:Id_Capabilities>
+<ogc:EID/>
+<ogc:FID/>
+</ogc:Id_Capabilities>
+</ogc:Filter_Capabilities>
+</wfs:WFS_Capabilities>
+</sfgp:WFSSettings>
+</sfgp:GoPublisherProject>

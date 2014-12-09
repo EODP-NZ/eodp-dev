@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<as:AppSchemaDataAccess xmlns:as="http://www.geotools.org/app-schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.geotools.org/app-schema AppSchemaDataAccess.xsd">
+	<namespaces>
+		<Namespace><prefix>gml</prefix><uri>http://www.opengis.net/gml/3.2</uri></Namespace>
+		<Namespace><prefix>om</prefix><uri>http://www.opengis.net/om/2.0</uri></Namespace>
+		<Namespace><prefix>sam</prefix><uri>http://www.opengis.net/sampling/2.0</uri></Namespace>
+		<Namespace><prefix>sams</prefix><uri>http://www.opengis.net/samplingSpatial/2.0</uri></Namespace>
+		<Namespace><prefix>xlink</prefix><uri>http://www.w3.org/1999/xlink</uri></Namespace>
+		<Namespace><prefix>xsi</prefix><uri>http://www.w3.org/2001/XMLSchema-instance</uri></Namespace>
+	</namespaces>
+	<sourceDataStores>
+		<DataStore>
+			<id>datastore</id>
+			<parameters>
+				<Parameter><name>dbtype</name><value>${eodp.dbtype}</value></Parameter>
+				<!--Parameter><name>jndiReferenceName</name><value>${eodp.jndi}</value></Parameter-->
+				<Parameter><name>host</name><value>${eodp.host}</value></Parameter>
+				<Parameter><name>port</name><value>${eodp.port}</value></Parameter>
+				<Parameter><name>database</name><value>${eodp.database}</value></Parameter>
+				<Parameter><name>user</name><value>${eodp.user}</value></Parameter>
+				<Parameter><name>passwd</name><value>${eodp.passwd}</value></Parameter>
+				<Parameter><name>schema</name><value>${eodp.schema}</value></Parameter>
+				<Parameter><name>Expose primary keys</name><value>true</value></Parameter>
+			</parameters>
+		</DataStore>
+	</sourceDataStores>
+	<targetTypes>
+		<FeatureType>
+		  <schemaUri>http://schemas.opengis.net/om/2.0/observation.xsd</schemaUri>
+		  <schemaUri>http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd</schemaUri>
+		</FeatureType>
+	</targetTypes>
+	<typeMappings>
+		<FeatureTypeMapping>
+			<sourceDataStore>datastore</sourceDataStore>
+			<sourceType>observationdiscovery</sourceType>
+			<targetElement>om:OM_Observation</targetElement>
+			<attributeMappings>
+				<AttributeMapping>
+					<targetAttribute>om:OM_Observation</targetAttribute>
+					<idExpression><OCQL>gmlid</OCQL></idExpression>
+				</AttributeMapping>
+				<AttributeMapping>
+					<targetAttribute>gml:identifier</targetAttribute>
+					<sourceExpression><OCQL>gmlidentifier</OCQL></sourceExpression>	
+					<ClientProperty><name>codeSpace</name><value>'${lcr.codespace}'</value></ClientProperty>	
+				</AttributeMapping>
+				<AttributeMapping>
+					<targetAttribute>om:type</targetAttribute>
+					<ClientProperty><name>xlink:href</name><value>observationtypeuri</value></ClientProperty>
+				</AttributeMapping>
+				<AttributeMapping>
+					<targetAttribute>om:phenomenonTime</targetAttribute>
+					<!--<idExpression><OCQL>strConCat('gml.timeperiod.', observationid)</OCQL></idExpression>-->
+					<sourceExpression><linkElement>_om_phenomenonTime</linkElement></sourceExpression>
+				</AttributeMapping>
+                <AttributeMapping>
+					<targetAttribute>om:resultTime</targetAttribute>
+					<!--<idExpression><OCQL>strConCat('gml.timeinstant.', observationid)</OCQL></idExpression>-->
+					<sourceExpression><linkElement>_om_resultTime</linkElement></sourceExpression>
+				</AttributeMapping>
+				<AttributeMapping>
+					<targetAttribute>om:validTime</targetAttribute>
+					<ClientProperty><name>xlink:href</name><value>'${nil.inapplicable}'</value></ClientProperty>
+				</AttributeMapping>
+				<AttributeMapping>
+					<targetAttribute>om:procedure</targetAttribute>
+					<ClientProperty><name>xlink:href</name><value>procedureuri</value></ClientProperty>
+				</AttributeMapping>
+				<AttributeMapping>
+					<targetAttribute>om:observedProperty</targetAttribute>
+					<ClientProperty><name>xlink:href</name><value>observedpropertyuri</value></ClientProperty>
+				</AttributeMapping>
+				<AttributeMapping>
+					<targetAttribute>om:featureOfInterest</targetAttribute>
+					<sourceExpression>
+						<OCQL>samplingfeatureid</OCQL><linkElement>_sams_SF_SpatialSamplingFeature</linkElement><linkField>FEATURE_LINK</linkField>
+					</sourceExpression>
+					<isMultiple>false</isMultiple>
+				</AttributeMapping>
+				<AttributeMapping>
+					<targetAttribute>om:resultQuality</targetAttribute>
+					<ClientProperty><name>xlink:href</name><value>'${nil.inapplicable}'</value></ClientProperty>
+				</AttributeMapping>				
+				<AttributeMapping>
+					<targetAttribute>om:result</targetAttribute>
+					<ClientProperty><name>xlink:href</name><value>'${nil.withheld}'</value></ClientProperty>
+				</AttributeMapping>
+			</attributeMappings>
+		</FeatureTypeMapping>
+		<FeatureTypeMapping>
+			<mappingName>_om_phenomenonTime</mappingName>
+			<sourceDataStore>datastore</sourceDataStore>
+			<sourceType>observationdiscovery</sourceType>
+			<targetElement>gml:TimePeriod</targetElement>
+			<attributeMappings>
+                <AttributeMapping>
+                    <targetAttribute>gml:TimePeriod</targetAttribute>
+                    <ClientProperty><name>gml:id</name><value>strConCat('gml.timeperiod.', observationid)</value></ClientProperty>
+                    <!--=== This is a hacky way of specifying the gml:id, but I couldn't the <idExpression/> element to work. ===-->
+                </AttributeMapping>
+				<AttributeMapping>
+					<targetAttribute>gml:beginPosition</targetAttribute>
+					<sourceExpression><OCQL>phenomenontimebegin</OCQL></sourceExpression>
+				</AttributeMapping>
+				<AttributeMapping>
+					<targetAttribute>gml:endPosition</targetAttribute>
+					<sourceExpression><OCQL>phenomenontimeend</OCQL></sourceExpression>
+				</AttributeMapping>
+			</attributeMappings>
+		</FeatureTypeMapping>
+		<FeatureTypeMapping>
+			<mappingName>_om_resultTime</mappingName>
+			<sourceDataStore>datastore</sourceDataStore>
+			<sourceType>observationdiscovery</sourceType>
+			<targetElement>gml:TimeInstant</targetElement>
+			<attributeMappings>
+                <AttributeMapping>
+                    <targetAttribute>gml:TimeInstant</targetAttribute>
+                    <ClientProperty><name>gml:id</name><value>strConCat('gml.timeinstant.', observationid)</value></ClientProperty>
+                    <!--=== This is a hacky way of specifying the gml:id, but I couldn't the <idExpression/> element to work. ===-->
+                </AttributeMapping>
+				<AttributeMapping>
+					<targetAttribute>gml:timePosition</targetAttribute>
+					<sourceExpression><OCQL>resulttime</OCQL></sourceExpression>
+				</AttributeMapping>
+			</attributeMappings>
+		</FeatureTypeMapping>
+		<FeatureTypeMapping>
+			<mappingName>_sams_SF_SpatialSamplingFeature</mappingName>
+			<!--=== Using a local sams:SF_SpatialSamplingFeature mapping as the mapping here differs (no sam:relatedObservation values) from the ===
+                === one used by the sams:SF_SpatialSamplingFeature published as a feature type (has sam:relatedObservation values).              ===-->
+			<sourceDataStore>datastore</sourceDataStore>
+			<sourceType>samplingfeature</sourceType>
+			<targetElement>sams:SF_SpatialSamplingFeature</targetElement>
+			<attributeMappings>
+				<AttributeMapping>
+					<targetAttribute>sams:SF_SpatialSamplingFeature</targetAttribute>
+					<idExpression><OCQL>gmlid</OCQL></idExpression>
+				</AttributeMapping>
+				<AttributeMapping>
+					<targetAttribute>gml:description</targetAttribute>
+					<sourceExpression><OCQL>samplingfeaturedescription</OCQL></sourceExpression>
+				</AttributeMapping>
+				<AttributeMapping>
+					<targetAttribute>gml:identifier</targetAttribute>
+					<sourceExpression><OCQL>gmlidentifier</OCQL></sourceExpression>	
+					<ClientProperty><name>codeSpace</name><value>'${lcr.codespace}'</value></ClientProperty>	
+				</AttributeMapping>
+				<AttributeMapping>
+					<targetAttribute>gml:name</targetAttribute>
+					<sourceExpression><OCQL>samplingfeaturename</OCQL></sourceExpression>	
+					<ClientProperty><name>codeSpace</name><value>'${lcr.codespace}'</value></ClientProperty>	
+				</AttributeMapping>
+				<AttributeMapping>
+					<targetAttribute>gml:name</targetAttribute>
+					<sourceExpression><OCQL>strConCat('MS.SI.', samplingfeatureid)</OCQL></sourceExpression>	
+					<ClientProperty><name>codeSpace</name><value>'http://someotherparty.example.org.nz'</value></ClientProperty>	
+				</AttributeMapping>
+				<AttributeMapping>
+					<targetAttribute>sam:type</targetAttribute>
+					<ClientProperty><name>xlink:href</name><value>samplingfeaturetypeuri</value></ClientProperty>
+				</AttributeMapping>
+				<AttributeMapping>
+					<targetAttribute>sam:sampledFeature</targetAttribute>
+					<ClientProperty><name>xsi:nil</name><value>'true'</value></ClientProperty>
+					<ClientProperty><name>nilReason</name><value>'missing'</value></ClientProperty>					
+				</AttributeMapping>
+				<AttributeMapping>
+					<targetAttribute>sams:shape/gml:Point</targetAttribute>
+					<!--=== Geoserver should have automagically detected that the geometry was a point, but didn't - hence explicit ===
+                        === sams:shape/gml:Point target. May be something awry with my PostGIS 2.0 set-up (?).                      ===-->
+					<idExpression><OCQL>strConcat('sams.shape.', samplingfeatureid)</OCQL></idExpression>
+					<sourceExpression><OCQL>shape</OCQL></sourceExpression>							
+				</AttributeMapping>
+				<AttributeMapping>
+					<targetAttribute>FEATURE_LINK</targetAttribute>
+					<sourceExpression><OCQL>samplingfeatureid</OCQL></sourceExpression>
+				</AttributeMapping>
+			</attributeMappings>
+		</FeatureTypeMapping>
+	</typeMappings>
+</as:AppSchemaDataAccess>

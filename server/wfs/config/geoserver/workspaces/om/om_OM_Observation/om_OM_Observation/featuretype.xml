@@ -1,0 +1,28 @@
+<featureType>
+    <id>om_OM_Observation</id>
+    <name>OM_Observation</name>
+    <nativeName>OM_Observation</nativeName>
+    <namespace>
+        <id>om_namespace</id>
+    </namespace>
+    <title>Observation</title>
+    <abstract>An Observation is an act ("event"), whose result is an estimate of the value of a property of the feature of interest. The observed property may be any property associated with the type of the feature of interest.</abstract>
+    <srs>EPSG:4326</srs>
+    <latLonBoundingBox>
+		<minx>171</minx><maxx>172</maxx>
+		<miny>-44</miny><maxy>-43</maxy>
+        <crs>EPSG:4326</crs>
+    </latLonBoundingBox>
+    <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+    <enabled>true</enabled>
+    <metadata>
+        <entry key="kml.regionateFeatureLimit">10</entry>
+        <entry key="indexingEnabled">false</entry>
+        <entry key="cachingEnabled">false</entry>
+    </metadata>
+    <store class="dataStore">
+        <id>om_OM_Observation_datastore</id>
+    </store>
+    <maxFeatures>0</maxFeatures>
+    <numDecimals>0</numDecimals>
+</featureType>

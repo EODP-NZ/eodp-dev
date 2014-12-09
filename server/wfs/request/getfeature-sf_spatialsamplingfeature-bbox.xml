@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!--Note coordinate axis order.-->
+
+<!--Using the Intersects operator.-->
+<wfs:GetFeature service="WFS" version="2.0.0" outputFormat="application/gml+xml; version=3.2"
+    xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:om="http://www.opengis.net/om/2.0"
+    xmlns:wfs="http://www.opengis.net/wfs/2.0" xmlns:fes="http://www.opengis.net/fes/2.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xsi:schemaLocation="http://www.opengis.net/wfs/2.0 http://schemas.opengis.net/wfs/2.0/wfs.xsd
+    http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/temporal.xsd">
+    <wfs:Query typeNames="sams:SF_SpatialSamplingFeature">
+        <fes:Filter>
+            <fes:Intersects>
+                <fes:ValueReference>sams:shape</fes:ValueReference>
+                <gml:Polygon srsName="urn:ogc:def:crs:EPSG::4326" gml:id="gml.polygon.id">
+                    <gml:exterior>
+                        <gml:LinearRing>
+                            <gml:posList srsDimension="2" count="5">-43.593 171.9285 -43.593 171.927 -43.591 171.927 -43.591 171.9285 -43.593 171.9285</gml:posList>
+                        </gml:LinearRing>
+                    </gml:exterior>
+                </gml:Polygon>
+            </fes:Intersects>
+        </fes:Filter>
+    </wfs:Query>
+</wfs:GetFeature>
+
+<!--Using the BBOX operator.-->
+<wfs:GetFeature service="WFS" version="2.0.0" outputFormat="application/gml+xml; version=3.2"
+    xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:om="http://www.opengis.net/om/2.0"
+    xmlns:wfs="http://www.opengis.net/wfs/2.0" xmlns:fes="http://www.opengis.net/fes/2.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xsi:schemaLocation="http://www.opengis.net/wfs/2.0 http://schemas.opengis.net/wfs/2.0/wfs.xsd
+    http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/temporal.xsd">
+    <wfs:Query typeNames="sams:SF_SpatialSamplingFeature">
+        <fes:Filter>
+            <fes:BBOX>
+                <gml:Envelope srsName="urn:ogc:def:crs:EPSG::4326">
+                    <gml:lowerCorner>-43.593 171.927</gml:lowerCorner>
+                    <gml:upperCorner>-43.591 171.9285</gml:upperCorner>
+                </gml:Envelope>
+            </fes:BBOX>
+        </fes:Filter>
+    </wfs:Query>
+</wfs:GetFeature>

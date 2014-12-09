@@ -1,0 +1,13 @@
+<dataStore>
+    <id>om_OM_Observation_datastore</id>
+    <name>om_OM_Observation</name>
+    <enabled>true</enabled>
+    <workspace>
+        <id>om_workspace</id>
+    </workspace>
+    <connectionParameters>
+        <entry key="namespace">http://www.opengis.net/om/2.0</entry>
+        <entry key="url">file:workspaces/om/om_OM_Observation/om_OM_Observation.xml</entry>
+        <entry key="dbtype">app-schema</entry>
+    </connectionParameters>
+</dataStore>

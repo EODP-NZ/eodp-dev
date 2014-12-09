@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--CREATE THE STORED QUERY - Go Publisher-->
+<wfs:CreateStoredQuery service="WFS" version="2.0.0" xmlns="http://www.opengis.net/wfs/2.0" xmlns:wfs="http://www.opengis.net/wfs/2.0"
+    xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:fes="http://www.opengis.net/fes/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
+    xsi:schemaLocation="http://www.opengis.net/wfs/2.0 http://schemas.opengis.net/wfs/2.0/wfs.xsd
+                        http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd">
+    <wfs:StoredQueryDefinition id="http://data.scinfo.org.nz/id/storedquery/eodp/getdata">
+        <Title>EODP - Get Data</Title>
+        <!-- Definition Template-Parameter -->
+        <wfs:Parameter name="xMin" type="xsd:double" />
+        <wfs:Parameter name="yMin" type="xsd:double" />
+        <wfs:Parameter name="xMax" type="xsd:double" />
+        <wfs:Parameter name="yMax" type="xsd:double" />
+        <wfs:Parameter name="observedPropertyURI" type="xsd:string" />
+        <wfs:Parameter name="phenomenonTimeBegin" type="xsd:date" />
+        <wfs:Parameter name="phenomenonTimeEnd" type="xsd:date" />
+        <wfs:QueryExpressionText returnFeatureTypes="sams:SF_SpatialSamplingFeature" language="urn:ogc:def:queryLanguage:OGC-WFS::WFS_QueryExpression">
+            <wfs:Query typeNames="sams:SF_SpatialSamplingFeature">
+                <fes:Filter>
+                   <fes:And>
+                     <fes:BBOX>
+                         <gml:Envelope srsName="urn:ogc:def:crs:EPSG::4326">
+                             <gml:lowerCorner>${yMin} ${xMin}</gml:lowerCorner>
+                             <gml:upperCorner>${yMax} ${xMax}</gml:upperCorner>
+                         </gml:Envelope>
+                     </fes:BBOX>
+                     <fes:PropertyIsEqualTo>
+                         <fes:ValueReference>sam:relatedObservation/om:OM_Observation/om:observedProperty/@xlink:href</fes:ValueReference>
+                         <fes:Literal>${observedPropertyURI}</fes:Literal>
+                     </fes:PropertyIsEqualTo>
+                     <fes:AnyInteracts>
+                         <fes:ValueReference>sam:relatedObservation/om:OM_Observation/om:phenomenonTime</fes:ValueReference>
+                         <fes:Literal>
+                             <gml:TimePeriod gml:id="gml.timeperiod.id">
+                                 <gml:beginPosition>${phenomenonTimeBegin}</gml:beginPosition>
+                                 <gml:endPosition>${phenomenonTimeEnd}</gml:endPosition>
+                             </gml:TimePeriod>
+                         </fes:Literal>
+                     </fes:AnyInteracts>
+                   </fes:And>
+                </fes:Filter>
+            </wfs:Query>
+        </wfs:QueryExpressionText>
+    </wfs:StoredQueryDefinition>
+</wfs:CreateStoredQuery>

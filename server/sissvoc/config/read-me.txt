@@ -1,0 +1,2 @@
+Optional: SISSVoc3 configuation files (eg ELDA .ttl configs). As documented at:
+    https://www.seegrid.csiro.au/wiki/Siss/SISSvoc30Deployment.

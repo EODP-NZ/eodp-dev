@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pm:PathMap xmlns:pm="http://www.snowflakesoftware.com/schema/pathmap" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.snowflakesoftware.com/schema/pathmap pathmap.xsd ">
+    <!--EODP GO Publisher RESTful configuration-->
+    <!---->
+    <!--FEATURE TYPE URIs-->
+    <!---->
+    <pm:PathMapEntry>
+        <pm:inputPath>/x/id/eodp/sams/sf_spatialsamplingfeature/{ResourceSpecificID}</pm:inputPath>
+        <pm:redirectToPath>eodp/wfs?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typenames=sams:SF_SpatialSamplingFeature&amp;featureid=eodp.sams.sf_spatialsamplingfeature.{ResourceSpecificID}</pm:redirectToPath>
+    </pm:PathMapEntry>
+    <pm:PathMapEntry>
+        <pm:inputPath>/x/id/eodp/om/om_observation/{ResourceSpecificID}</pm:inputPath>
+        <pm:redirectToPath>eodp/wfs?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typenames=om:OM_Observation&amp;featureid=eodp.om.om_observation.{ResourceSpecificID}</pm:redirectToPath>
+    </pm:PathMapEntry>
+</pm:PathMap>
