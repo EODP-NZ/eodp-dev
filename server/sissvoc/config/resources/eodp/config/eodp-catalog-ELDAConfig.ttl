@@ -1,6 +1,6 @@
 ##############################################################
 #
-# This is the LDA configuration for the LCR NZ EODP Deomstration Feature Catalogue
+# This is the LDA configuration for the LCR NZ EODP Demonstration Feature Catalogue
 # Reference - <https://www.seegrid.csiro.au/wiki/Siss/SISSvoc30Specification>
 #
 # Copyright (c) CSIRO 2012
